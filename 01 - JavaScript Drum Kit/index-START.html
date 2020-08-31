@@ -72,8 +72,7 @@
       console.log(key);
       const keys = document.querySelectorAll('.key')
       function removeTransiton(e) {
-        console.log('remove====>', e.propetyName, this)
-        if (e.propertyName !== 'transform') return;
+        if (e.properdtyName !== 'transform') return;
         this.classList.remove('playing')
       }
       keys.forEach(key => key.addEventListener('transitionend', removeTransiton));
