@@ -51,14 +51,20 @@
     function logText(e) {
 
       console.log(this.classLisst.value);
-      e.stopPropagation(); //stop bubbling
+      //  e.stopPropagation(); //stop bubbling
       // console.log(this);
     }
 
     divs.forEach(div => div.addEventListener('click', logText, {
-      capture: true
+      capture: false,
+      once: true
 
     }));
+    button.addEventListener('click', () => {
+      console.log('click!!!!');
+    }, {
+      once: true
+    });
   </script>
 </body>
 
